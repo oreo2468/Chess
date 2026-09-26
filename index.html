@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Chess</h1>
+    <p id="status" class="status">White to move</p>
+
+    <div class="game">
+      <div class="captured" id="captured-top"></div>
+      <div class="board-wrap">
+        <div id="board" class="board" aria-label="Chess board"></div>
+      </div>
+      <div class="captured" id="captured-bottom"></div>
+    </div>
+
+    <div class="controls">
+      <button id="new-game">New game</button>
+      <button id="undo">Undo</button>
+      <button id="flip">Flip board</button>
+    </div>
+  </main>
+
+  <div id="promotion" class="promotion hidden">
+    <div class="promotion-box">
+      <p>Promote pawn to:</p>
+      <div id="promotion-choices" class="promotion-choices"></div>
+    </div>
+  </div>
+
+  <script src="pieces.js"></script>
+  <script src="chess.js"></script>
+</body>
+</html>
